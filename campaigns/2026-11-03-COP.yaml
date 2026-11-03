@@ -1,0 +1,44 @@
+# Launch plan: November COP (Cashback Property) videos.
+# Status: WAITING FOR OWNER CONFIRMATION. Nothing has been uploaded to Meta yet.
+
+product: COP
+page_key: cop                       # TO CONFIRM: Solusi Tunai MY - Cashback Raykat?
+campaign_name: "03/11 - COP"        # TO CONFIRM
+daily_budget_myr: 50                # TO CONFIRM
+
+drive_folder:
+  path: "October - COP / Nov"
+  id: "1d6B1I1wf3650d_8Z2VbO8nrCjxTUTKRV"
+
+location:
+  mode: country                     # country | cities
+  countries: ["MY"]
+  cities: []                        # e.g. [kuala_lumpur, shah_alam] when mode = cities
+
+languages: [malay]                  # any of: malay, english, chinese
+
+copy:
+  primary_text: |
+    TO CONFIRM: paste the Malay primary text for these videos here
+    (or say "reuse 13/10 Video 1 copy").
+  headline: "Chat with us"
+
+creatives:                          # found in Drive on 2026-11-03, all shared "anyone with link"
+  - { ad_name: "Video 1",  file: "COP V1.mp4",  drive_id: "1vIipybdDl1PTDu260O_x4czeUEnrSrLE" }
+  - { ad_name: "Video 2",  file: "COP V2.mp4",  drive_id: "15688gU0m_gT3Q0eC4ncydAfWE-bWVdfQ" }
+  - { ad_name: "Video 3",  file: "COP V3.mp4",  drive_id: "1Om-rzmUfYjOIaJnuUJVaySW9F6SGZsX5" }
+  - { ad_name: "Video 4",  file: "COP V4.mp4",  drive_id: "12H2TNUw9v6SHgODB27AeVCPGbTQXYwrX" }
+  - { ad_name: "Video 5",  file: "COP V5.mp4",  drive_id: "1FoevsEmg5p2X2oe0FhNT0AXPD3fnj1bY" }
+  - { ad_name: "Video 6",  file: "COP V6.mp4",  drive_id: "1T0-Q-xrSZdmeQjCd00vnhZ1p8NUvHTPs" }
+  - { ad_name: "Video 7",  file: "COP V7.mp4",  drive_id: "1RlyPUpAtVvcIjkJgV7KynlZX2zWblXkV" }
+  - { ad_name: "Video 8",  file: "COP V8.mp4",  drive_id: "1gyUcNXTB7pZOkE2hPX8A4PCoAChpRJRO" }
+  - { ad_name: "Video 9",  file: "COP V9.mp4",  drive_id: "1Rcnu0K8Dm2-fUPj8w5AbCLUoS-W51f3y" }
+  - { ad_name: "Video 10", file: "COP V10.mp4", drive_id: "1Y6EmWwGYrUK72LJKZSS2B8P-tZeL6zZI" }
+
+# Filled in by Claude during the run:
+result:
+  meta_video_ids: {}
+  campaign_id: null
+  ad_set_id: null
+  ad_ids: {}
+  published: false

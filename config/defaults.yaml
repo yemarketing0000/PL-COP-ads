@@ -1,0 +1,73 @@
+# Default settings for every launch. A campaign file in campaigns/ can override any key.
+# Values below were copied from the working "13/10 - COP" campaign in the RamC account.
+
+meta:
+  business: "Personal Loan Agensi"            # business_id 186527537878614
+  ad_account_id: "1951010162255376"           # RamC company ads Account (MYR)
+  pages:                                      # pick one per campaign (page_key)
+    cop: { id: "1331937170002706", name: "Solusi Tunai MY - Cashback Raykat" }   # TO CONFIRM
+    pl:  { id: "1388224611032714", name: "LoanHub Malaysia" }                    # TO CONFIRM
+  instagram_user_id: null                     # no IG account is linked to this ad account yet
+
+drive:
+  # Files in a folder are matched by name:  "<anything> V<n>.mp4" -> Video n,  "<anything> P<n>.jpg/png" -> Pic n
+  # Each file must be shared "Anyone with the link: Viewer" so Meta can fetch it.
+  direct_url_template: "https://drive.usercontent.google.com/download?id={file_id}&export=download&confirm=t"
+  max_creatives: 10
+
+# "Andromeda" structure: 1 campaign, CBO, 1 broad ad set, many different creatives.
+campaign:
+  name_template: "{dd}/{mm} - {product}"      # e.g. "03/11 - COP"
+  objective: OUTCOME_ENGAGEMENT
+  buying_type: AUCTION
+  budget_level: CBO
+  daily_budget_myr: 50                        # always confirm with the owner before each launch
+  bid_strategy: LOWEST_COST_WITHOUT_CAP       # "Highest volume"
+  special_ad_categories: []                   # see the HOUSING / FINANCIAL note in README
+
+ad_set:
+  name: "Broad"
+  optimization_goal: CONVERSATIONS
+  destination_type: WHATSAPP
+  billing_event: IMPRESSIONS
+  advantage_audience: true                    # A+ audience on; age range is a suggestion only
+  age_min: 25
+  age_range_suggestion: [25, 50]
+  placements: advantage_plus                  # no manual placements
+  location:
+    default: { countries: ["MY"] }
+    # City targeting uses a radius around the city centre (no Meta city key needed).
+    # Always show the chosen cities + radius to the owner and wait for "OK" before creating.
+    city_radius_km: 25
+    cities:
+      kuala_lumpur:   { lat: 3.1390, lng: 101.6869 }
+      shah_alam:      { lat: 3.0733, lng: 101.5185 }
+      petaling_jaya:  { lat: 3.1073, lng: 101.6067 }
+      seremban:       { lat: 2.7258, lng: 101.9424 }
+      melaka:         { lat: 2.1896, lng: 102.2501 }
+      johor_bahru:    { lat: 1.4927, lng: 103.7414 }
+      ipoh:           { lat: 4.5975, lng: 101.0901 }
+      penang:         { lat: 5.4141, lng: 100.3288 }
+      alor_setar:     { lat: 6.1248, lng: 100.3678 }
+      kota_bharu:     { lat: 6.1254, lng: 102.2381 }
+      kuala_terengganu: { lat: 5.3302, lng: 103.1408 }
+      kuantan:        { lat: 3.8077, lng: 103.3260 }
+      kota_kinabalu:  { lat: 5.9804, lng: 116.0735 }
+      kuching:        { lat: 1.5533, lng: 110.3592 }
+  languages:
+    # Meta locale IDs. 41 is the ID the current COP ad set uses for Malay.
+    # 1001 / 1004 are Meta's "English (All)" / "Chinese (All)" groups: check them in Ads Manager on the first launch.
+    malay: 41
+    english: 1001
+    chinese: 1004
+  default_languages: [malay]
+
+ad:
+  name_template: "{kind} {n}"                 # "Video 1" ... "Video 10", "Pic 1" ... "Pic 10"
+  headline: "Chat with us"
+  call_to_action: WHATSAPP_MESSAGE
+  advantage_plus_creative: true
+  ai_disclosure: ask                          # owner decides OPT_IN / OPT_OUT each launch
+
+publish:
+  mode: draft_then_confirm                    # build everything as a draft, show summary, publish only after "GO"
