@@ -35,8 +35,7 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
    Videos: poll `ads_get_ad_videos` (with `video_ids`) until `status` is ready; take `picture` as thumbnail.
    If Meta rejects the Drive URL (HTML interstitial), stop and tell the owner; fallback is uploading
    from Ads Manager media library, then continue from step 5 using the existing video IDs.
-5. **Campaign.** Note: this tool creates the campaign live but PAUSED (not a draft), so it costs nothing until activated.
- `ads_create_campaign`: objective, CBO `campaign_daily_budget` = MYR x 100 (sen),
+5. **Campaign.** `ads_create_campaign`: objective, CBO `campaign_daily_budget` = MYR x 100 (sen),
    `campaign_bid_strategy` LOWEST_COST_WITHOUT_CAP, `special_ad_categories` from config.
    This tool creates the campaign live but PAUSED (not a draft), so it costs nothing until activated.
 6. **Ad set "Broad".** `ads_create_ad_set` with `optimization_goal` CONVERSATIONS, `destination_type` WHATSAPP,
