@@ -15,10 +15,14 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
 - Never guess budget, page or ad copy. Ask.
 - Ask the owner whether the creatives were made with AI tools (`self_ai_disclosure`); never decide it for them.
 
-## One-time account setup (already needed once)
-- Malaysia requires an advertiser + payer on every ad set. The API tool cannot set it, so the owner sets a
-  default once: Ads Manager (desktop) > Advertising settings > Default advertiser and payer > Malaysia.
-  Without it `ads_create_ad_set` fails with "Advertiser is missing" (subcode 3858634).
+## Malaysia advertiser/payer (known blocker)
+- Malaysia requires a verified advertiser + payer on every ad set. The API tool cannot set it, and this account
+  has no "Default advertiser and payer > Malaysia" option, so `ads_create_ad_set` fails with
+  "Advertiser is missing" (subcode 3858634), even with `source_adset_id`.
+- Workaround: ask the owner to duplicate a working ad set (e.g. the latest "Broad") in Ads Manager into the new
+  campaign, published while switched off. Then: delete the copied ads (`ads_update_entity` status DELETED),
+  rename to "Broad" and set targeting with `ads_update_entity`. The copy's `start_time` can't be edited;
+  control the start date with the campaign's `start_time` instead.
 
 ## Steps
 

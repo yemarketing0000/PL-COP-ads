@@ -1,6 +1,5 @@
 # Launch plan: November COP (Cashback Property) videos.
-# Status: videos uploaded, campaign created (PAUSED). Ad set blocked: needs default advertiser/payer for Malaysia.
-# Waiting for: ad text folder from owner.
+# Status: videos uploaded, campaign + Broad ad set ready (both PAUSED). Waiting for: ad text folder from owner.
 
 product: COP
 page_key: cop                       # confirmed: Solusi Tunai MY - Cashback Raykat (1331937170002706)
@@ -9,7 +8,7 @@ start_time: "2026-11-04T00:00:00+08:00"
 daily_budget_myr: 50                # confirmed
 
 drive_folder:
-  path: "October - COP / Nov"
+  path: "October - COP / Nov - video ads"
   id: "1d6B1I1wf3650d_8Z2VbO8nrCjxTUTKRV"
 
 location:
@@ -52,6 +51,7 @@ result:
     Video 9: "1468935848445551"
     Video 10: "1093477073449788"
   campaign_id: "120250151810240032"   # 04/11 - COP, PAUSED, RM50/day CBO
-  ad_set_id: null
+  ad_set_id: "120250152095340032"     # "Broad": owner duplicated "Broad 1" in Ads Manager (keeps advertiser/payer),
+                                      # Claude renamed it, set MY + Malay(41) + English(1001), deleted the 4 copied old ads
   ad_ids: {}
   published: false
