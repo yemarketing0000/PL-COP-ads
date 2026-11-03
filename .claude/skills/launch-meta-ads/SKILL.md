@@ -15,6 +15,11 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
 - Never guess budget, page or ad copy. Ask.
 - Ask the owner whether the creatives were made with AI tools (`self_ai_disclosure`); never decide it for them.
 
+## One-time account setup (already needed once)
+- Malaysia requires an advertiser + payer on every ad set. The API tool cannot set it, so the owner sets a
+  default once: Ads Manager (desktop) > Advertising settings > Default advertiser and payer > Malaysia.
+  Without it `ads_create_ad_set` fails with "Advertiser is missing" (subcode 3858634).
+
 ## Steps
 
 1. **Find the files.** `search_files` with `parentId = '<folder id>'` (paginate). Keep image/* and video/* only.
@@ -26,11 +31,14 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
    Wait for confirmation (this is the location/language verification step).
 4. **Upload media.** `ads_creative_upload_media` with `upload_source: URL`, `media_type` IMAGE/VIDEO,
    `media_url` = `drive.direct_url_template` with the file id, `name` = ad name.
+   Do not set `media_creation_source` (that is only for Meta AI media).
    Videos: poll `ads_get_ad_videos` (with `video_ids`) until `status` is ready; take `picture` as thumbnail.
    If Meta rejects the Drive URL (HTML interstitial), stop and tell the owner; fallback is uploading
    from Ads Manager media library, then continue from step 5 using the existing video IDs.
-5. **Campaign.** `ads_create_campaign`: objective, CBO `campaign_daily_budget` = MYR x 100 (sen),
+5. **Campaign.** Note: this tool creates the campaign live but PAUSED (not a draft), so it costs nothing until activated.
+ `ads_create_campaign`: objective, CBO `campaign_daily_budget` = MYR x 100 (sen),
    `campaign_bid_strategy` LOWEST_COST_WITHOUT_CAP, `special_ad_categories` from config.
+   This tool creates the campaign live but PAUSED (not a draft), so it costs nothing until activated.
 6. **Ad set "Broad".** `ads_create_ad_set` with `optimization_goal` CONVERSATIONS, `destination_type` WHATSAPP,
    `billing_event` IMPRESSIONS, `promoted_object` `{"page_id": "<page>"}`, targeting:
    - country: `{"geo_locations":{"countries":["MY"]},"age_min":25,"age_range":[25,50],"locales":[41],"targeting_automation":{"advantage_audience":1}}`

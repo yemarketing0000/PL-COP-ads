@@ -1,10 +1,12 @@
 # Launch plan: November COP (Cashback Property) videos.
-# Status: WAITING FOR OWNER CONFIRMATION. Nothing has been uploaded to Meta yet.
+# Status: videos uploaded, campaign created (PAUSED). Ad set blocked: needs default advertiser/payer for Malaysia.
+# Waiting for: ad text folder from owner.
 
 product: COP
-page_key: cop                       # TO CONFIRM: Solusi Tunai MY - Cashback Raykat?
-campaign_name: "03/11 - COP"        # TO CONFIRM
-daily_budget_myr: 50                # TO CONFIRM
+page_key: cop                       # confirmed: Solusi Tunai MY - Cashback Raykat (1331937170002706)
+campaign_name: "04/11 - COP"
+start_time: "2026-11-04T00:00:00+08:00"
+daily_budget_myr: 50                # confirmed
 
 drive_folder:
   path: "October - COP / Nov"
@@ -15,12 +17,11 @@ location:
   countries: ["MY"]
   cities: []                        # e.g. [kuala_lumpur, shah_alam] when mode = cities
 
-languages: [malay]                  # any of: malay, english, chinese
+languages: [malay, english]         # confirmed
 
 copy:
   primary_text: |
-    TO CONFIRM: paste the Malay primary text for these videos here
-    (or say "reuse 13/10 Video 1 copy").
+    TO COME: owner is creating a Drive folder with the ad text.
   headline: "Chat with us"
 
 creatives:                          # found in Drive on 2026-11-03, all shared "anyone with link"
@@ -36,9 +37,21 @@ creatives:                          # found in Drive on 2026-11-03, all shared "
   - { ad_name: "Video 10", file: "COP V10.mp4", drive_id: "1Y6EmWwGYrUK72LJKZSS2B8P-tZeL6zZI" }
 
 # Filled in by Claude during the run:
+ai_disclosure: OPT_OUT             # owner: not made with AI
+
 result:
-  meta_video_ids: {}
-  campaign_id: null
+  meta_video_ids:
+    Video 1: "1009191948159867"
+    Video 2: "1345858670879422"
+    Video 3: "1432652882388515"
+    Video 4: "1841178937007485"
+    Video 5: "1113189798120410"
+    Video 6: "2223869478525633"
+    Video 7: "1329875749175317"
+    Video 8: "1377295774300808"
+    Video 9: "1468935848445551"
+    Video 10: "1093477073449788"
+  campaign_id: "120250151810240032"   # 04/11 - COP, PAUSED, RM50/day CBO
   ad_set_id: null
   ad_ids: {}
   published: false
