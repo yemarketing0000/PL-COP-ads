@@ -58,6 +58,15 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
    `ads_activate_entity` on the campaign (publishes campaign + ad set + ads). Read back live status and report it.
 10. **Record.** Save all IDs in the campaign yaml `result:` block, commit and push.
 
+## Lessons from the first launch (Nov 2026)
+- Ad text comes from a Google Doc. `read_file_content` breaks emojis and cuts long docs off: use
+  `download_file_content` with `exportMimeType: text/plain` and decode the base64. Restore blank lines between
+  paragraphs (keep single breaks for role lists and a ✅ title + its description line).
+- Video thumbnail: use the `picture` URL from `ads_get_ad_videos` exactly as given (signed URL; editing it fails).
+- Headlines: when the owner gives fewer headlines than videos, match each to the caption theme and never put
+  an RM amount in a headline that is higher than that caption's offer.
+- Build ads PAUSED, send the copy file + Ads Manager link for review, then activate campaign -> ad set -> each ad.
+
 ## Andromeda checklist (why the structure is like this)
 - 1 campaign, 1 ad set, CBO: Meta's retrieval engine picks the audience; splitting into many ad sets starves learning.
 - Broad targeting + Advantage+ audience: creatives do the targeting.

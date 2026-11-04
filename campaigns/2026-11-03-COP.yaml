@@ -1,5 +1,5 @@
 # Launch plan: November COP (Cashback Property) videos.
-# Status: campaign, Broad ad set and 10 ads built, ALL PAUSED. Waiting for owner review + "GO".
+# Status: LIVE since 2026-11-04 (owner said GO). Campaign + Broad + 10 ads activated.
 
 product: COP
 page_key: cop                       # confirmed: Solusi Tunai MY - Cashback Raykat (1331937170002706)
@@ -63,4 +63,4 @@ result:
     Video 8: { ad: "120250167982700032", creative: "3443050862749642" }
     Video 9: { ad: "120250167983830032", creative: "1344854194294764" }
     Video 10: { ad: "120250167985070032", creative: "1150502907710499" }
-  published: false
+  published: true                     # activated 2026-11-04
