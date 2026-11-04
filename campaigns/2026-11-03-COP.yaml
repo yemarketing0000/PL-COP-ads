@@ -1,5 +1,5 @@
 # Launch plan: November COP (Cashback Property) videos.
-# Status: videos uploaded, campaign + Broad ad set ready (both PAUSED). Waiting for: ad text folder from owner.
+# Status: campaign, Broad ad set and 10 ads built, ALL PAUSED. Waiting for owner review + "GO".
 
 product: COP
 page_key: cop                       # confirmed: Solusi Tunai MY - Cashback Raykat (1331937170002706)
@@ -19,9 +19,8 @@ location:
 languages: [malay, english]         # confirmed
 
 copy:
-  primary_text: |
-    TO COME: owner is creating a Drive folder with the ad text.
-  headline: "Chat with us"
+  source: 'Google Doc "Ads text" (1-Pdq4oPzF0jWTjQkCdeeSHl1qQmlUIHl5eYSGNI87Ak) in "Nov - video ads"'
+  per_ad: "see campaigns/2026-11-03-COP-copy.md (one caption per video, 5 headlines matched by theme)"
 
 creatives:                          # found in Drive on 2026-11-03, all shared "anyone with link"
   - { ad_name: "Video 1",  file: "COP V1.mp4",  drive_id: "1vIipybdDl1PTDu260O_x4czeUEnrSrLE" }
@@ -53,5 +52,15 @@ result:
   campaign_id: "120250151810240032"   # 04/11 - COP, PAUSED, RM50/day CBO
   ad_set_id: "120250152095340032"     # "Broad": owner duplicated "Broad 1" in Ads Manager (keeps advertiser/payer),
                                       # Claude renamed it, set MY + Malay(41) + English(1001), deleted the 4 copied old ads
-  ad_ids: {}
+  ad_ids:
+    Video 1: { ad: "120250167976010032", creative: "1681666849996434" }
+    Video 2: { ad: "120250167977010032", creative: "979255295243555" }
+    Video 3: { ad: "120250167978290032", creative: "2214557226142901" }
+    Video 4: { ad: "120250167979430032", creative: "2039532223544523" }
+    Video 5: { ad: "120250167979960032", creative: "4591829361099100" }
+    Video 6: { ad: "120250167980950032", creative: "1497573048853839" }
+    Video 7: { ad: "120250167981410032", creative: "3297699130426366" }
+    Video 8: { ad: "120250167982700032", creative: "3443050862749642" }
+    Video 9: { ad: "120250167983830032", creative: "1344854194294764" }
+    Video 10: { ad: "120250167985070032", creative: "1150502907710499" }
   published: false
