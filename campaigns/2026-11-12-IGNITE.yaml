@@ -1,0 +1,50 @@
+# Launch plan: Ignite / Chinchin, November pics (Chinese).
+# Status: WAITING. Blocked on the Ignite ad account (see blockers). Nothing has been created on Meta yet.
+
+product: IGNITE
+account: ignite                     # Ignite foundry marketing, ad account 962616313264216
+page_key: chinchin                  # confirmed by owner: Chinchin - 专门帮助企业打造1对多成交营销流程 (1432972036560378)
+campaign_name: null                 # ask at launch, e.g. "DD/MM - Chinchin"
+start_time: null                    # ask at launch
+daily_budget_myr: 50                # confirmed
+
+drive_folder:
+  path: "Ignite Marketing Content / November content"
+  id: "1m5vqhag2kXhNfqZod1w6Bhv0v1TFe4UK"
+  note: "Folder also has CC V1-V4 videos; owner chose pics only for this launch."
+
+location:
+  mode: country                     # confirmed: whole Malaysia
+  countries: ["MY"]
+  cities: []
+
+languages: [chinese]                # confirmed: Chinese only (locale 1004; verify on the ad set)
+
+copy:
+  source: 'Google Doc "AD text " (1RKFMH_tioMJj_kT9zCRQyYkK-5kgjPuFTyJeJkwLj2U) in "November content"'
+  per_ad: "see campaigns/2026-11-12-IGNITE-copy.md (one caption per pic)"
+  headlines: null                   # not in the doc: ask the owner
+
+creatives:                          # found in Drive on 2026-11-12. Sharing: owner only (must be "anyone with link")
+  - { ad_name: "Pic 1", file: "Pic 1 .png", drive_id: "1djy7eG12zlw3xAQzFgJVzfAoGJYZV1YU" }
+  - { ad_name: "Pic 2", file: "Pic 2 .png", drive_id: "1quNuP9SX5aGd4GvMWvGy6Bxex8JgjJwn" }
+  - { ad_name: "Pic 3", file: "Pic 3 .png", drive_id: "16u9hqbV-sXepl9XvhvaPgTnWX7DKq6fQ" }
+  - { ad_name: "Pic 4", file: "Pic 4 .png", drive_id: "1jm0jrbGWAW_CIh9aDQ6yfxEnQ5sTNrXO" }
+  - { ad_name: "Pic 5", file: "Pic 5 .png", drive_id: "1g1wqWMZJLn7QnaUsbDkPUDgOiQ5jbZcp" }
+  - { ad_name: "Pic 6", file: "Pic 6 .png", drive_id: "1mqRbhwUN2icQt2Xfbe8TDxh2N60i87-h" }
+
+blockers:                           # checked 2026-11-12 with ads_get_ad_accounts
+  - "Meta connector not enabled on ad account 962616313264216 (is_ads_mcp_enabled: false, Meta rollout)"
+  - "No payment method on ad account 962616313264216 (owner adds it in Billing)"
+  - "Malaysia advertiser/payer: new account has no ad set to duplicate (owner sets default advertiser & payer for MY)"
+  - "Pic 1-6 are private in Drive (owner shares folder as Anyone with the link: Viewer)"
+
+open_questions:                     # ask before building
+  - "Button: Pic 1-4 copy says 'see course details / sign up', Pic 5-6 say 'message us, send 【转化】/【布局】'. WhatsApp, Messenger or a link?"
+  - "Headline(s) for the 6 ads"
+  - "AI disclosure: were the pics made with AI tools?"
+  - "Campaign name and start date"
+
+ai_disclosure: null
+
+result: {}                          # filled in by Claude during the launch

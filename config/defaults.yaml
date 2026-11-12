@@ -1,16 +1,33 @@
 # Default settings for every launch. A campaign file in campaigns/ can override any key.
-# Values below were copied from the working "13/10 - COP" campaign in the RamC account.
+# Campaign/ad set values below were copied from the working "13/10 - COP" campaign in the RamC account.
 
-meta:
-  business: "Personal Loan Agensi"            # business_id 186527537878614
-  ad_account_id: "1951010162255376"           # RamC company ads Account (MYR)
-  pages:                                      # pick one per campaign (page_key)
-    cop: { id: "1331937170002706", name: "Solusi Tunai MY - Cashback Raykat" }   # TO CONFIRM
-    pl:  { id: "1388224611032714", name: "LoanHub Malaysia" }                    # TO CONFIRM
-  instagram_user_id: null                     # no IG account is linked to this ad account yet
+# One entry per business / ad account. A campaign file picks one with `account:` (default: ramc)
+# and a page with `page_key:`. Run the pre-flight check (SKILL.md step 0) before every launch.
+default_account: ramc
+accounts:
+  ramc:
+    business: "Personal Loan Agensi"          # business_id 186527537878614
+    ad_account_id: "1951010162255376"         # RamC company ads Account (MYR)
+    pages:
+      cop: { id: "1331937170002706", name: "Solusi Tunai MY - Cashback Raykat" }
+      pl:  { id: "1388224611032714", name: "LoanHub Malaysia" }
+    instagram_user_id: null                   # no IG account is linked to this ad account yet
+    default_languages: [malay]
+  ignite:
+    business: "Ignite foundry marketing"      # business_id 1598758014901079
+    ad_account_id: "962616313264216"          # Ignite foundry marketing (MYR)
+    # 2026-11-12: Meta connector not enabled on this account yet (Meta rollout) and no payment method.
+    pages:
+      chinchin: { id: "1432972036560378", name: "Chinchin - 专门帮助企业打造1对多成交营销流程" }
+      ignite:   { id: "1363338953533982", name: "Ignite Foundry Marketing - 专门帮企业建立一对多成交营销流程" }
+    instagram_user_id: null
+    default_languages: [chinese]
 
 drive:
-  # Files in a folder are matched by name:  "<anything> V<n>.mp4" -> Video n,  "<anything> P<n>.jpg/png" -> Pic n
+  # Files in a folder are matched by name (case-insensitive, spaces trimmed):
+  #   "<anything> V<n>.mp4" or "Video <n>.mp4" -> Video n
+  #   "<anything> P<n>.png/jpg" or "Pic <n>.png" -> Pic n
+  # Ad text: a Google Doc in the same folder with one section per ad, headed "Pic 1:" / "Video 1:".
   # Each file must be shared "Anyone with the link: Viewer" so Meta can fetch it.
   direct_url_template: "https://drive.usercontent.google.com/download?id={file_id}&export=download&confirm=t"
   max_creatives: 10
@@ -60,7 +77,7 @@ ad_set:
     malay: 41
     english: 1001
     chinese: 1004
-  default_languages: [malay]
+  # default languages are set per account (accounts.<key>.default_languages); always confirm with the owner
 
 ad:
   name_template: "{kind} {n}"                 # "Video 1" ... "Video 10", "Pic 1" ... "Pic 10"

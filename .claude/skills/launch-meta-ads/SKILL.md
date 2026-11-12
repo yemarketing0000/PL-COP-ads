@@ -1,11 +1,12 @@
 ---
 name: launch-meta-ads
-description: Take pictures/videos from a Google Drive folder and launch them as a Meta ads campaign (1 campaign, 1 "Broad" ad set, Pic 1-10 or Video 1-10 ads) for the PL / COP business. Use when the owner says things like "launch the new COP videos", "upload ads from Drive folder X", or "new campaign with pic 1-10".
+description: Take pictures/videos from a Google Drive folder and launch them as a Meta ads campaign (1 campaign, 1 "Broad" ad set, Pic 1-10 or Video 1-10 ads) for the owner's businesses (RamC: PL / COP; Ignite: Chinchin page, Chinese ads). Use when the owner says things like "launch the new COP videos", "upload ads from Drive folder X", or "new campaign with pic 1-10".
 ---
 
 # Launch Meta ads from Google Drive
 
-Settings live in `config/defaults.yaml`. Each launch gets its own file in `campaigns/` (copy the latest one).
+Settings live in `config/defaults.yaml` (one entry per ad account under `accounts:`). Each launch gets its own
+file in `campaigns/` (copy the latest one for the same account).
 Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*`, load with ToolSearch).
 
 ## Hard rules
@@ -23,12 +24,22 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
   campaign, published while switched off. Then: delete the copied ads (`ads_update_entity` status DELETED),
   rename to "Broad" and set targeting with `ads_update_entity`. The copy's `start_time` can't be edited;
   control the start date with the campaign's `start_time` instead.
+- A new ad account (e.g. Ignite) has no "Broad" to duplicate. The owner either sets Business Settings >
+  Default advertiser and payer > Malaysia for that business, or creates the first ad set by hand in Ads Manager
+  (any name, switched off) so it can be reused with the workaround above.
 
 ## Steps
 
+0. **Pre-flight.** `ads_get_ad_accounts` and find the campaign's `account`. It must have
+   `is_ads_mcp_enabled: true` and `has_payment_method: true`, and `account_status` ACTIVE. If not, stop and tell
+   the owner exactly what is missing (Meta connector rollout = wait; payment method = owner adds it in Billing).
+   The page must appear in `ads_get_user_pages`.
 1. **Find the files.** `search_files` with `parentId = '<folder id>'` (paginate). Keep image/* and video/* only.
-   Map names: `... V<n>` -> `Video n`, `... P<n>` -> `Pic n`. Files without a number: sort by createdTime and
-   number them, then show the mapping to the owner. Max 10 per launch.
+   Map names (case-insensitive, trim spaces): `... V<n>` / `Video <n>` -> `Video n`, `... P<n>` / `Pic <n>` -> `Pic n`.
+   Files without a number: sort by createdTime and number them, then show the mapping to the owner. Max 10 per launch.
+   If the folder has both pics and videos, ask the owner which to use (pics, videos, or both).
+   Ad text: a Google Doc in the folder (e.g. "AD text"). Split it on the `Pic n:` / `Video n:` headings
+   (any case) -> one primary text per ad. Save it to `campaigns/<date>-<product>-copy.md`.
 2. **Check sharing.** `get_file_permissions` on each file. Needs `{"type":"anyone","role":"reader"}`.
    If missing, ask the owner to share the folder as "Anyone with the link" (or ask permission to change it).
 3. **Write the plan** into `campaigns/<date>-<product>.yaml` and show the owner a short summary table.
@@ -44,10 +55,11 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
    This tool creates the campaign live but PAUSED (not a draft), so it costs nothing until activated.
 6. **Ad set "Broad".** `ads_create_ad_set` with `optimization_goal` CONVERSATIONS, `destination_type` WHATSAPP,
    `billing_event` IMPRESSIONS, `promoted_object` `{"page_id": "<page>"}`, targeting:
-   - country: `{"geo_locations":{"countries":["MY"]},"age_min":25,"age_range":[25,50],"locales":[41],"targeting_automation":{"advantage_audience":1}}`
+   - country: `{"geo_locations":{"countries":["MY"]},"age_min":25,"age_range":[25,50],"locales":[<language ids>],"targeting_automation":{"advantage_audience":1}}`
    - cities: replace geo_locations with
      `{"custom_locations":[{"latitude":..,"longitude":..,"radius":25,"distance_unit":"kilometer","country":"MY"}, ...]}`
-   - languages: `locales` = ids of the chosen languages from config.
+   - languages: `locales` = ids of the chosen languages from config (account default, e.g. Chinese for Ignite).
+     After saving, read `targeting` back and check Meta shows the expected language name.
    No interests, no manual placements (Andromeda wants broad + Advantage+).
 7. **Creatives + ads.** For each file: `ads_create_creative` (page_id, video_id + image_url thumbnail, or
    image_hash; `message` = primary text; `headline`; `call_to_action_type` WHATSAPP_MESSAGE;
