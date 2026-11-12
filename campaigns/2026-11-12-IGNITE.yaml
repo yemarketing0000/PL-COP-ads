@@ -4,8 +4,8 @@
 product: IGNITE
 account: ignite                     # Ignite foundry marketing, ad account 962616313264216
 page_key: chinchin                  # confirmed by owner: Chinchin - 专门帮助企业打造1对多成交营销流程 (1432972036560378)
-campaign_name: null                 # ask at launch, e.g. "DD/MM - Chinchin"
-start_time: null                    # ask at launch
+campaign_name: "13/11 - Chinchin"    # proposed from the name template; owner can rename
+start_time: "2026-11-13T00:00:00+08:00"   # owner: "start from tomorrow" (move to launch day if launch is later)
 daily_budget_myr: 50                # confirmed
 
 drive_folder:
@@ -23,7 +23,8 @@ languages: [chinese]                # confirmed: Chinese only (locale 1004; veri
 copy:
   source: 'Google Doc "AD text " (1RKFMH_tioMJj_kT9zCRQyYkK-5kgjPuFTyJeJkwLj2U) in "November content"'
   per_ad: "see campaigns/2026-11-12-IGNITE-copy.md (one caption per pic)"
-  headlines: null                   # not in the doc: ask the owner
+  headlines: null                   # owner will add headlines later (launch without, or wait for them)
+  call_to_action: WHATSAPP_MESSAGE  # owner: all 6 ads go to WhatsApp
 
 creatives:                          # found in Drive on 2026-11-12. Sharing: owner only (must be "anyone with link")
   - { ad_name: "Pic 1", file: "Pic 1 .png", drive_id: "1djy7eG12zlw3xAQzFgJVzfAoGJYZV1YU" }
@@ -40,11 +41,9 @@ blockers:                           # checked 2026-11-12 with ads_get_ad_account
   - "Pic 1-6 are private in Drive (owner shares folder as Anyone with the link: Viewer)"
 
 open_questions:                     # ask before building
-  - "Button: Pic 1-4 copy says 'see course details / sign up', Pic 5-6 say 'message us, send 【转化】/【布局】'. WhatsApp, Messenger or a link?"
-  - "Headline(s) for the 6 ads"
-  - "AI disclosure: were the pics made with AI tools?"
-  - "Campaign name and start date"
+  - "AI disclosure: owner said 'not all made with AI tools'. Which of Pic 1-6 used AI (OPT_IN) and which not (OPT_OUT)?"
+  - "Chinchin page must have a WhatsApp number linked for the WhatsApp button"
 
-ai_disclosure: null
+ai_disclosure: mixed                # per pic, see open question
 
 result: {}                          # filled in by Claude during the launch
