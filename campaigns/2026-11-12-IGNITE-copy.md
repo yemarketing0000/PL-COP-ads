@@ -1,18 +1,20 @@
 # Ignite / Chinchin, November pics: ad copy
 
 Source: Google Doc "AD text " in Drive folder "Ignite Marketing Content / November content". Page: Chinchin.
-Headlines and button: not decided yet (see `2026-11-12-IGNITE.yaml` open questions).
+Button: WhatsApp Message on all 6 ads. Headlines: from the `headline:` section at the end of the same doc (added 12/11).
 
-| Ad | Theme | Ending (call to action in the text) |
-|---|---|---|
-| Pic 1 | 2027 growth plan for e-commerce/brand owners | 👇 点击了解课程详情，报名学习 (course) |
-| Pic 2 | Using AI for content but orders not growing | 👇 点击查看课程详情，报名学习 (course) |
-| Pic 3 | Only selling on promotions / price wars | 👇 点击了解课程详情，报名学习 (course) |
-| Pic 4 | Relying on one or two lead sources | 👇 点击查看课程详情 (course) |
-| Pic 5 | People ask but don't pay | 📩 点击私讯，发送【转化】(1-on-1 service) |
-| Pic 6 | Sales dropping despite ads + promos | 📩 点击私讯，发送【布局】(1-on-1 service) |
+| Ad | Headline | Theme | Ending (call to action in the text) |
+|---|---|---|---|
+| Pic 1 | 电商老板，2027年还要靠运气等订单？ | 2027 growth plan for e-commerce/brand owners | 👇 点击了解课程详情，报名学习 (course) |
+| Pic 2 | 电商老板，AI内容越做越多，订单却没增加？ | Using AI for content but orders not growing | 👇 点击查看课程详情，报名学习 (course) |
+| Pic 3 | 电商老板，降价才有单，利润怎么办？ | Only selling on promotions / price wars | 👇 点击了解课程详情，报名学习 (course) |
+| Pic 4 | 生意做了5年，客源还靠同一个渠道？ | Relying on one or two lead sources | 👇 点击查看课程详情 (course) |
+| Pic 5 | 电商老板，问价的人很多，付款的没几个？ | People ask but don't pay | 📩 点击私讯，发送【转化】(1-on-1 service) |
+| Pic 6 | 电商老板，广告照投，业绩却一直掉？ | Sales dropping despite ads + promos | 📩 点击私讯，发送【布局】(1-on-1 service) |
 
 ## Pic 1
+
+**Headline:** 电商老板，2027年还要靠运气等订单？
 
 做电商、做品牌的老板，如果广告一停，订单也跟着停——
 
@@ -44,6 +46,8 @@ Headlines and button: not decided yet (see `2026-11-12-IGNITE.yaml` open questio
 
 ## Pic 2
 
+**Headline:** 电商老板，AI内容越做越多，订单却没增加？
+
 已经用 AI 写文案、做图片的电商老板：内容越做越快，订单却没有跟着增加？
 
 每天发更多、广告换更多，顾客还是问完价就消失。
@@ -74,6 +78,8 @@ AI 可以帮你更快写出十篇文案。
 
 ## Pic 3
 
+**Headline:** 电商老板，降价才有单，利润怎么办？
+
 一做促销才有订单的电商老板：价格已经降了，客户还在问“可以再便宜吗？”
 
 最累的是，单量看起来不错，扣完广告、运费和成本，利润却没剩多少。
@@ -103,6 +109,8 @@ AI 可以帮你更快写出十篇文案。
 
 ## Pic 4
 
+**Headline:** 生意做了5年，客源还靠同一个渠道？
+
 生意做了几年的老板：如果最大的客源渠道突然没单，你还有其他地方带来客户吗？
 
 老客户介绍少一点、平台流量掉一点，整个月的业绩就跟着紧张。
@@ -126,6 +134,8 @@ AI 可以帮你更快写出十篇文案。
 👇 点击查看课程详情，为下一阶段的生意增长做好布局。
 
 ## Pic 5
+
+**Headline:** 电商老板，问价的人很多，付款的没几个？
 
 电商老板，广告有人看、产品有人问，偏偏付款的没几个？
 
@@ -163,6 +173,8 @@ AI 可以帮你更快写出十篇文案。
 先找出客户在哪一步流失，再决定下一笔预算怎么花。
 
 ## Pic 6
+
+**Headline:** 电商老板，广告照投，业绩却一直掉？
 
 电商老板，今年广告继续投、促销继续做，业绩却还是往下掉？
 

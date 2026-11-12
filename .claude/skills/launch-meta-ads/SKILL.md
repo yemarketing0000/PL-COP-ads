@@ -39,7 +39,8 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
    Files without a number: sort by createdTime and number them, then show the mapping to the owner. Max 10 per launch.
    If the folder has both pics and videos, ask the owner which to use (pics, videos, or both).
    Ad text: a Google Doc in the folder (e.g. "AD text"). Split it on the `Pic n:` / `Video n:` headings
-   (any case) -> one primary text per ad. Save it to `campaigns/<date>-<product>-copy.md`.
+   (any case) -> one primary text per ad. Headlines may be in a `headline:` section at the end of the same doc
+   (`Pic n: <headline>` lines): the last caption stops at that heading. Save it to `campaigns/<date>-<product>-copy.md`.
 2. **Check sharing.** `get_file_permissions` on each file. Needs `{"type":"anyone","role":"reader"}`.
    If missing, ask the owner to share the folder as "Anyone with the link" (or ask permission to change it).
 3. **Write the plan** into `campaigns/<date>-<product>.yaml` and show the owner a short summary table.

@@ -23,7 +23,13 @@ languages: [chinese]                # confirmed: Chinese only (locale 1004; veri
 copy:
   source: 'Google Doc "AD text " (1RKFMH_tioMJj_kT9zCRQyYkK-5kgjPuFTyJeJkwLj2U) in "November content"'
   per_ad: "see campaigns/2026-11-12-IGNITE-copy.md (one caption per pic)"
-  headlines: null                   # owner will add headlines later (launch without, or wait for them)
+  headlines:                        # from the 'headline:' section of the AD text doc (added 2026-11-12)
+    Pic 1: "电商老板，2027年还要靠运气等订单？"
+    Pic 2: "电商老板，AI内容越做越多，订单却没增加？"
+    Pic 3: "电商老板，降价才有单，利润怎么办？"
+    Pic 4: "生意做了5年，客源还靠同一个渠道？"
+    Pic 5: "电商老板，问价的人很多，付款的没几个？"
+    Pic 6: "电商老板，广告照投，业绩却一直掉？"
   call_to_action: WHATSAPP_MESSAGE  # owner: all 6 ads go to WhatsApp
 
 creatives:                          # found in Drive on 2026-11-12. Sharing: owner only (must be "anyone with link")
