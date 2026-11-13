@@ -8,6 +8,7 @@ page_key: chinchin                  # confirmed by owner: Chinchin - 专门帮�
 campaign_name: "13/11 - Chinchin"    # proposed from the name template; owner can rename
 start_time: null                    # owner wanted 13/11; set to the actual launch day once the account is enabled
 daily_budget_myr: 50                # confirmed
+reuse_from_ads_manager: true        # Option B: reuse the owner-made campaign/ad set instead of creating new ones
 
 drive_folder:
   path: "Ignite Marketing Content / November content"
@@ -44,7 +45,8 @@ creatives:                          # found in Drive on 2026-11-12. Shared "anyo
 blockers:                           # re-checked 2026-11-13 with ads_get_ad_accounts (payment method: added)
   - "Meta connector not enabled on ad account 962616313264216 (is_ads_mcp_enabled: false, Meta rollout).
      Daily scheduled check: trig_013KpjuyGMSJaiqjM6ieGYzX (10:17 MYT)"
-  - "Malaysia advertiser/payer: new account has no ad set to duplicate (owner sets default advertiser & payer for MY)"
+  - "Malaysia advertiser/payer: owner is creating a switched-off campaign + ad set in Ads Manager (Option B,
+     2026-11-13) with Beneficiary and payer filled in; Claude reuses it at launch (rename Broad, MY + Chinese, delete placeholder ad)"
 
 open_questions: []                  # all answered (13/11)
 
