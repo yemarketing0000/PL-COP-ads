@@ -4,6 +4,7 @@
 product: IGNITE
 account: ignite                     # Ignite foundry marketing, ad account 962616313264216
 page_key: chinchin                  # confirmed by owner: Chinchin - 专门帮助企业打造1对多成交营销流程 (1432972036560378)
+                                    # WhatsApp connected (owner confirmed 2026-11-13)
 campaign_name: "13/11 - Chinchin"    # proposed from the name template; owner can rename
 start_time: null                    # owner wanted 13/11; set to the actual launch day once the account is enabled
 daily_budget_myr: 50                # confirmed
@@ -45,9 +46,7 @@ blockers:                           # re-checked 2026-11-13 with ads_get_ad_acco
      Daily scheduled check: trig_013KpjuyGMSJaiqjM6ieGYzX (10:17 MYT)"
   - "Malaysia advertiser/payer: new account has no ad set to duplicate (owner sets default advertiser & payer for MY)"
 
-open_questions:                     # ask before building
-  - "Chinchin page must have a WhatsApp number linked for the WhatsApp button. Not readable via the connector and
-     the page has never run ads (Ad Library: 0); owner to check in Page settings (asked 2026-11-13)"
+open_questions: []                  # all answered (13/11)
 
 ai_disclosure: OPT_OUT             # owner: none of Pic 1-6 made with AI tools
 
