@@ -9,6 +9,7 @@ campaign_name: "13/11 - Chinchin"    # proposed from the name template; owner ca
 start_time: null                    # owner wanted 13/11; set to the actual launch day once the account is enabled
 daily_budget_myr: 50                # confirmed
 reuse_from_ads_manager: true        # Option B: reuse the owner-made campaign/ad set instead of creating new ones
+owner_made_campaign: "13/11"         # created by owner in the Ignite ad account (switched off); find it by this name
 
 drive_folder:
   path: "Ignite Marketing Content / November content"
