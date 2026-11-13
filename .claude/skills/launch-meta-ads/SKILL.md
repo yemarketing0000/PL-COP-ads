@@ -34,6 +34,9 @@ Tools: Google Drive MCP (`mcp__Google_Drive__*`) and Meta Ads MCP (`mcp__META__*
    `is_ads_mcp_enabled: true` and `has_payment_method: true`, and `account_status` ACTIVE. If not, stop and tell
    the owner exactly what is missing (Meta connector rollout = wait; payment method = owner adds it in Billing).
    The page must appear in `ads_get_user_pages`.
+   WhatsApp: the Meta connector can't read a Page's linked WhatsApp number. Ask the owner to confirm it
+   (Page › Settings › Linked accounts › WhatsApp, or Business Suite › Settings › Business assets › WhatsApp accounts).
+   If it's missing, `ads_create_creative` / `ads_create_ad` fail at build time: stop and tell the owner.
 1. **Find the files.** `search_files` with `parentId = '<folder id>'` (paginate). Keep image/* and video/* only.
    Map names (case-insensitive, trim spaces): `... V<n>` / `Video <n>` -> `Video n`, `... P<n>` / `Pic <n>` -> `Pic n`.
    Files without a number: sort by createdTime and number them, then show the mapping to the owner. Max 10 per launch.

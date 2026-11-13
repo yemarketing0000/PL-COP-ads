@@ -46,7 +46,8 @@ blockers:                           # re-checked 2026-11-13 with ads_get_ad_acco
   - "Malaysia advertiser/payer: new account has no ad set to duplicate (owner sets default advertiser & payer for MY)"
 
 open_questions:                     # ask before building
-  - "Chinchin page must have a WhatsApp number linked for the WhatsApp button"
+  - "Chinchin page must have a WhatsApp number linked for the WhatsApp button. Not readable via the connector and
+     the page has never run ads (Ad Library: 0); owner to check in Page settings (asked 2026-11-13)"
 
 ai_disclosure: OPT_OUT             # owner: none of Pic 1-6 made with AI tools
 
