@@ -5,7 +5,7 @@ product: IGNITE
 account: ignite                     # Ignite foundry marketing, ad account 962616313264216
 page_key: chinchin                  # confirmed by owner: Chinchin - 专门帮助企业打造1对多成交营销流程 (1432972036560378)
 campaign_name: "13/11 - Chinchin"    # proposed from the name template; owner can rename
-start_time: "2026-11-13T00:00:00+08:00"   # owner: "start from tomorrow" (move to launch day if launch is later)
+start_time: null                    # owner wanted 13/11; set to the actual launch day once the account is enabled
 daily_budget_myr: 50                # confirmed
 
 drive_folder:
@@ -32,7 +32,7 @@ copy:
     Pic 6: "电商老板，广告照投，业绩却一直掉？"
   call_to_action: WHATSAPP_MESSAGE  # owner: all 6 ads go to WhatsApp
 
-creatives:                          # found in Drive on 2026-11-12. Sharing: owner only (must be "anyone with link")
+creatives:                          # found in Drive on 2026-11-12. Shared "anyone with link: viewer" on 2026-11-13
   - { ad_name: "Pic 1", file: "Pic 1 .png", drive_id: "1djy7eG12zlw3xAQzFgJVzfAoGJYZV1YU" }
   - { ad_name: "Pic 2", file: "Pic 2 .png", drive_id: "1quNuP9SX5aGd4GvMWvGy6Bxex8JgjJwn" }
   - { ad_name: "Pic 3", file: "Pic 3 .png", drive_id: "16u9hqbV-sXepl9XvhvaPgTnWX7DKq6fQ" }
@@ -40,16 +40,14 @@ creatives:                          # found in Drive on 2026-11-12. Sharing: own
   - { ad_name: "Pic 5", file: "Pic 5 .png", drive_id: "1g1wqWMZJLn7QnaUsbDkPUDgOiQ5jbZcp" }
   - { ad_name: "Pic 6", file: "Pic 6 .png", drive_id: "1mqRbhwUN2icQt2Xfbe8TDxh2N60i87-h" }
 
-blockers:                           # checked 2026-11-12 with ads_get_ad_accounts
-  - "Meta connector not enabled on ad account 962616313264216 (is_ads_mcp_enabled: false, Meta rollout)"
-  - "No payment method on ad account 962616313264216 (owner adds it in Billing)"
+blockers:                           # re-checked 2026-11-13 with ads_get_ad_accounts (payment method: added)
+  - "Meta connector not enabled on ad account 962616313264216 (is_ads_mcp_enabled: false, Meta rollout).
+     Daily scheduled check: trig_013KpjuyGMSJaiqjM6ieGYzX (10:17 MYT)"
   - "Malaysia advertiser/payer: new account has no ad set to duplicate (owner sets default advertiser & payer for MY)"
-  - "Pic 1-6 are private in Drive (owner shares folder as Anyone with the link: Viewer)"
 
 open_questions:                     # ask before building
-  - "AI disclosure: owner said 'not all made with AI tools'. Which of Pic 1-6 used AI (OPT_IN) and which not (OPT_OUT)?"
   - "Chinchin page must have a WhatsApp number linked for the WhatsApp button"
 
-ai_disclosure: mixed                # per pic, see open question
+ai_disclosure: OPT_OUT             # owner: none of Pic 1-6 made with AI tools
 
 result: {}                          # filled in by Claude during the launch
