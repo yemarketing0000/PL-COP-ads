@@ -1,5 +1,7 @@
 # Launch plan: Ignite / Chinchin, November pics (Chinese).
-# Status: WAITING. Blocked on the Ignite ad account (see blockers). Nothing has been created on Meta yet.
+# Status: BUILT BY OWNER. On 2026-11-18 the owner uploaded Pic 1-6 by hand in Ads Manager (campaign "13/11",
+# Ignite account) using the setup sheet, because the Meta connector is still not enabled on this account.
+# Claude has not verified it (cannot read the account yet); record IDs once the connector is on.
 
 product: IGNITE
 account: ignite                     # Ignite foundry marketing, ad account 962616313264216
